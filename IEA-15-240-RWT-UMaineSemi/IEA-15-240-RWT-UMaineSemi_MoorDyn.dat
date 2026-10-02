@@ -1,0 +1,60 @@
+--------------------- MoorDyn Input File ------------------------------------
+Generated with OpenFAST_IO
+Comments from seed file have been dropped. Output Channels are not yet fully supported
+NOTE: MoorDyn does not use ECHO, instead use WriteLog of 0, 1, 2, or 3 in the options list 
+----------------------- LINE TYPES ------------------------------------------
+Name        Diam        MassDen     EA          BA/-zeta    EI          Cd          Ca          CdAx        CaAx        Cl (optional) dF (optional) cF (optional)
+(-)         (m)         (kg/m)      (N)         (N-s/-)     (N-m^2)     (-)         (-)         (-)         (-)         (-)         (-)         (-)        
+main          0.3330     685.0000   3270000000.0000 -1.0000 0.0000e+00    2.0000      0.8200      0.4000      0.2700   
+---------------------- POINTS --------------------------------
+ID          Attachment  X           Y           Z           M           V           CdA         CA         
+(-)         (-)         (m)         (m)         (m)         (kg)        (m^3)       (m^2)       (-)        
+1         Vessel     -58.0000     0.0000     -14.0000   0.0000e+00  0.0000e+00    0.0000      0.0000   
+2          Fixed     -837.6000    0.0000     -200.0000  0.0000e+00  0.0000e+00    0.0000      0.0000   
+3         Vessel      29.0000     50.2290    -14.0000   0.0000e+00  0.0000e+00    0.0000      0.0000   
+4          Fixed     418.8000    725.3830    -200.0000  0.0000e+00  0.0000e+00    0.0000      0.0000   
+5         Vessel      29.0000    -50.2290    -14.0000   0.0000e+00  0.0000e+00    0.0000      0.0000   
+6          Fixed     418.8000    -725.3830   -200.0000  0.0000e+00  0.0000e+00    0.0000      0.0000   
+---------------------- LINES --------------------------------------
+Line        LineType    AttachA     AttachB     UnstrLen    NumSegs     Outputs    
+(-)         (-)         (-)         (-)         (m)         (-)         (-)        
+1          main          2           1       850.0000       50           -     
+2          main          4           3       850.0000       50           -     
+3          main          6           5       850.0000       50           -     
+---------------------- SOLVER OPTIONS ---------------------------------------
+              0.001000 DTM         - time step to use in mooring integration (s)
+        3000000.000000 KBOT        - bottom stiffness (Pa/m)
+         300000.000000 CBOT        - bottom damping (Pa-s/m)
+              1.000000 DTIC        - time interval for analyzing convergence during IC gen (s)
+             60.000000 TMAXIC      - max time for ic gen (s)
+              4.000000 CDSCALEIC   - factor by which to scale drag coefficients during dynamic relaxation (-)
+              0.001000 THRESHIC    - threshold for IC convergence (-)
+------------------------ OUTPUTS --------------------------------------------
+AnchTen1
+AnchTen2
+AnchTen3
+Con1fx
+Con1fy
+Con1fz
+Con2fx
+Con2fy
+Con2fz
+Con3fx
+Con3fy
+Con3fz
+Con4fx
+Con4fy
+Con4fz
+Con5fx
+Con5fy
+Con5fz
+Con6fx
+Con6fy
+Con6fz
+FairTen1
+FairTen2
+FairTen3
+fx
+fy
+fz
+------------------------- END --------------------------------------
